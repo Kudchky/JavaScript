@@ -3,9 +3,14 @@ const arrayNumeros = [];
 let promedio;
 
 for (i = 1; i <= cantidadNumeros; i++) {
-  arrayNumeros.push(+prompt("Ingrese un numero: "));
+  arrayNumeros.push(+prompt(`Ingrese un numero (${i} de ${cantidadNumeros})`));
 }
 
-promedio = arrayNumeros.reduce((acc, numActual) => acc + numActual, 0) / cantidadNumeros;
+promedio =
+  arrayNumeros.reduce((acc, numActual) => acc + numActual, 0) / cantidadNumeros;
 
-alert(`Ingresaste los numeros ${arrayNumeros.join(" ,")} y el valor promedio es: ${promedio}`);
+alert(
+  `Ingresaste los numeros 
+   ${arrayNumeros.join(" ,")} 
+   y el valor promedio es: ${promedio}`
+);
